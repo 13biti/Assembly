@@ -1,14 +1,15 @@
 section .data
 	hello db "lets do something " , 0 
 
-section .text 
+section .code 
 		global _start
 
 _start:
-		mov ax  , 09H
-		lea dx , [hello]
-		int 21h
+		mov ax , 4
+		lea cx , [hello]
+		mov dx , 19
+		int 80H
 		mov ah , 4Ch
-		int 21h
+		int 80h
 
 		
