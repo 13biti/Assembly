@@ -183,6 +183,7 @@ GetInput :
     mov ecx, msg
     mov edx, 17
     int 0x80
+
     ; Read one character 
     mov eax, 3
     mov ebx, 0
